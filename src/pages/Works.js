@@ -1,3 +1,3 @@
 export default function Works() {
-  return <div>WOrk</div>;
+  return <div>WORKS</div>;
 }

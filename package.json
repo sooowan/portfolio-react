@@ -3,13 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@lottiefiles/dotlottie-react": "^0.14.0",
+    "@reduxjs/toolkit": "^2.8.2",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^13.2.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "classnames": "^2.5.1",
+    "open-color": "^1.9.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "react-lottie": "^1.2.10",
+    "react-lottie-player": "^2.1.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.2",
     "react-scripts": "5.0.1",
+    "redux": "^5.0.1",
+    "redux-actions": "^3.0.3",
+    "sass": "^1.89.1",
+    "styled-components": "^6.1.18",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -35,5 +48,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

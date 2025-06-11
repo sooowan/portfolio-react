@@ -19,7 +19,9 @@ const LayoutBlock = styled.div`
 `;
 
 export default function Layout() {
-  const path = useLocation().pathname;
+  const location = useLocation();
+  const path = location.pathname;
+  // 잠ㄱ깐만
   const tabName = pages.map((page) => {
     if (page.path === path) {
       return page.name;
@@ -36,7 +38,7 @@ export default function Layout() {
         </div>
         <div className={cn('content-wrap')}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" index element={<Home />} />
             <Route path="/works" element={<Works />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

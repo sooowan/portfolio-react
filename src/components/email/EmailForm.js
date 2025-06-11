@@ -5,7 +5,7 @@ import Button from '../common/Button';
 const EmailFormBlock = styled.form`
   width: 100%;
   max-width: 768px;
-  margin: 80px auto 20px;
+  margin: 80px auto 40px;
   @media (max-width: 768px) {
     margin: 32px auto 20px;
   }
@@ -33,6 +33,7 @@ const InputBlock = styled.div`
     border-bottom: 1px solid var(--bd-lv-1);
     width: 100%;
     background: none;
+    color: var(--txt-df-color);
   }
 `;
 const TextAreaBlock = styled.div`
@@ -48,6 +49,7 @@ const TextAreaBlock = styled.div`
     height: 320px;
     resize: none;
     background: none;
+    color: var(--txt-df-color);
   }
 `;
 
@@ -104,7 +106,7 @@ export default function EmailForm({
         <textarea value={body} id="text" onChange={onChangeBody} />
         <StyleLabel htmlFor="text">Message</StyleLabel>
       </TextAreaBlock>
-      <Button type="submit">보내기</Button>
+      <Button type="submit">이메일 보내기</Button>
     </EmailFormBlock>
   );
 }

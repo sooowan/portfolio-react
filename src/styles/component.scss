@@ -1,5 +1,17 @@
 @import '/node_modules/open-color/open-color.css';
 
+/**Hidden */
+.hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 /**Switch Style */
 .switch-wrap {
   display: flex;
@@ -32,10 +44,10 @@
   top: 4px;
   left: 4px;
   display: inline-block;
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 20px;
-  background: var(--bd-lv-1);
+  background-color: var(--oc-white);
   transition: 0.2s;
 }
 .switch-btn input[type='checkbox'] {
@@ -51,9 +63,19 @@
 }
 .switch-btn input[type='checkbox']:checked + .switch-label {
   background: var(--oc-black);
-  border: 1px solid var(--oc-black);
+  border-color: var(--oc-black);
 }
 .switch-btn input[type='checkbox']:checked + .switch-label::before {
-  background: var(--oc-white);
+  background-color: var(--oc-white);
   left: 28px;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .switch-wrap {
+    justify-content: flex-end;
+  }
+  .switch-name {
+    display: none;
+  }
 }

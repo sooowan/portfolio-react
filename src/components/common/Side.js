@@ -32,13 +32,14 @@ export default function Side({ title = info.title }) {
           </NavLink>
         ))}
       </aside>
-      <footer className={cn('footer')}>
+      <div className={cn('footer')}>
         <Switch
+          darkmode="true"
           title="Dark Mode"
           defaultChecked={'dark' === theme}
           hanleClickTheme={() => setTheme(theme === 'dark' ? '' : 'dark')}
         />
-      </footer>
+      </div>
     </div>
   );
 }

@@ -8,6 +8,8 @@ import Home from '../../pages/Home';
 import Works from '../../pages/Works';
 import Contact from '../../pages/Contact';
 import info from '../pages';
+import { useSelector } from 'react-redux';
+import SendingLottie from '../img/SendingLottie';
 
 const cn = classNames.bind(mystyle);
 const pages = info.pages;
@@ -21,7 +23,6 @@ const LayoutBlock = styled.div`
 export default function Layout() {
   const location = useLocation();
   const path = location.pathname;
-  // 잠ㄱ깐만
   const tabName = pages.map((page) => {
     if (page.path === path) {
       return page.name;
@@ -29,6 +30,11 @@ export default function Layout() {
       return '';
     }
   });
+
+  const loading = useSelector((state) => {
+    return state.loading['email/EMAIL_SEND'];
+  });
+
   return (
     <LayoutBlock>
       <Side />
@@ -36,12 +42,16 @@ export default function Layout() {
         <div className={cn('tab-wrap')}>
           <span className={cn('tab-on')}>{tabName}</span>
         </div>
-        <div className={cn('content-wrap')}>
+        <div
+          className={cn('content-wrap')}
+          style={loading ? { overflow: 'hidden' } : { overflow: 'auto' }}
+        >
           <Routes>
             <Route path="/" index element={<Home />} />
             <Route path="/works" element={<Works />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          {loading === true && <SendingLottie />}
         </div>
       </div>
     </LayoutBlock>

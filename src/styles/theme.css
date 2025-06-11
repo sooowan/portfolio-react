@@ -8,6 +8,7 @@
   --txt-disabled: var(--oc-gray-3);
   --bd-lv-1: var(--oc-gray-4);
   --df-hover: var(--oc-gray-3);
+  --df-dimed: var(--oc-black-rgb);
 }
 
 [data-theme='dark'] {

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import HomeLottie from '../components/img/HomeLottie';
 import '../styles/font.scss';
 import Button from '../components/common/Button';
+import { Helmet } from 'react-helmet-async';
 
 const HomeBlock = styled.div`
   text-align: center;
@@ -14,12 +15,17 @@ const HomeBlock = styled.div`
 
 export default function Home() {
   return (
-    <HomeBlock>
-      <HomeLottie />
-      <h1>Welcome to my page!</h1>
-      <Button to="/contact" className="large">
-        CONTACT
-      </Button>
-    </HomeBlock>
+    <div>
+      <Helmet>
+        <title>이영애 | REACT</title>
+      </Helmet>
+      <HomeBlock>
+        <HomeLottie />
+        <h1>Welcome to my page!</h1>
+        <Button to="/contact" className="large">
+          CONTACT
+        </Button>
+      </HomeBlock>
+    </div>
   );
 }

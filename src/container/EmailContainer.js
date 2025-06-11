@@ -67,7 +67,7 @@ export default function EmailContainer() {
       dispatch(finishLoading('email/EMAIL_SEND'));
       setModal2(true);
       dispatch(initialize());
-    }, 2000);
+    }, 5000);
   };
   const onSubmit = (e) => {
     e.preventDefault();

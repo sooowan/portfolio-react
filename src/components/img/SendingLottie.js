@@ -12,13 +12,8 @@ const defaultOptions = {
 };
 
 const initStyle = {
-  position: 'absolute',
-  left: '0',
-  top: '50%',
-  transform: 'translateY(-50%)',
   width: '100%',
   height: '200px',
-  margin: '0 auto',
   pointerEvents: 'none',
 };
 

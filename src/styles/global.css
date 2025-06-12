@@ -12,6 +12,7 @@ body {
   height: 100%;
   font-size: 14px;
   line-height: 20px;
+  background: var(--main-bg);
 }
 a {
   color: inherit;

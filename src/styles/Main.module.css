@@ -26,8 +26,8 @@
 
 @media screen and (max-width: 768px) {
   .main-wrap {
-    height: calc(100vh - 132px);
-    margin-top: 132px;
+    height: calc(100vh - 164px);
+    margin-top: 164px;
   }
   .tab-wrap {
     display: none;

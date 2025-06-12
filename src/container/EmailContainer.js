@@ -71,7 +71,6 @@ export default function EmailContainer() {
   return (
     <div>
       <EmailForm
-        email={email}
         onChangeField={onChangeField}
         onSubmit={onSubmit}
         loading={loading}

@@ -14,6 +14,7 @@ const initialState = {
   body: '',
   name: '',
   email: '',
+  sendTime: '',
 };
 
 const email = handleActions(

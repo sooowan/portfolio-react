@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import Button from '../common/Button';
 import { useForm } from 'react-hook-form';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { formatDate } from '../../lib/format';
 
 const EmailFormBlock = styled.form`
   width: 100%;
@@ -65,12 +66,7 @@ const ErrMsg = styled.span`
 const emailRegEx =
   /^[A-Za-z0-9]([-_.]?[A-Za-z0-9])*@[A-Za-z0-9]([-_.]?[A-Za-z0-9])*\.[A-Za-z]{2,3}$/;
 
-export default function EmailForm({
-  email,
-  onChangeField,
-  onSubmit,
-  resetForm,
-}) {
+export default function EmailForm({ onChangeField, onSubmit, resetForm }) {
   const {
     register,
     handleSubmit, //e.preventDefault();불필요
@@ -82,6 +78,7 @@ export default function EmailForm({
     Object.keys(datas).map((key) =>
       onChangeField({ key: key, val: datas[key] }),
     );
+    onChangeField({ key: 'sendTime', val: currentTime });
     onSubmit();
   };
   useEffect(() => {
@@ -93,13 +90,23 @@ export default function EmailForm({
     };
   }, [resetForm, reset]);
 
+  const [currentTime, setCurrentTime] = useState(formatDate(new Date()));
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(formatDate(new Date()));
+      // console.log(currentTime);
+    }, 1000); // Update every second
+
+    return () => clearInterval(intervalId); // Clear interval on unmount
+  }, []);
   return (
     <div>
       <EmailFormBlock onSubmit={handleSubmit(setValueAndSubmit)}>
+        <input type="hidden" name="timestamp" value={currentTime} />
         <InputBlock>
           <input
             placeholder="이름을 입력하세요..."
-            defaultValue={email.name}
             id="name"
             {...register('name', {
               required: '필수 입력 항목입니다.',
@@ -114,7 +121,6 @@ export default function EmailForm({
           <input
             placeholder="이메일을 입력하세요..."
             id="email"
-            defaultValue={email.email}
             {...register('email', {
               required: '필수 입력 항목입니다.',
               pattern: {
@@ -131,7 +137,6 @@ export default function EmailForm({
           <input
             placeholder="제목을 입력하세요..."
             id="subject"
-            defaultValue={email.subject}
             {...register('subject', { required: '필수 입력 항목입니다.' })}
             type="text"
           />
@@ -139,7 +144,7 @@ export default function EmailForm({
           {errors.subject && <ErrMsg>{errors.subject.message}</ErrMsg>}
         </InputBlock>
         <TextAreaBlock>
-          <textarea id="text" defaultValue={email.body} {...register('body')} />
+          <textarea id="text" {...register('body')} />
           <StyleLabel htmlFor="text">Message</StyleLabel>
         </TextAreaBlock>
         <Button func="true" type="submit">

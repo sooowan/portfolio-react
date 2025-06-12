@@ -4,19 +4,21 @@ import FullScreen from './FullScreen';
 
 const AskModalBlock = styled.div`
   width: 320px;
-  background-color: var(--df-bg);
+  background: var(--main-bg);
   padding: 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.125);
-  border-radius: 4px;
+  border-radius: 8px;
   &.confirm {
     width: 240px;
   }
   h2 {
-    margin-top: 0;
-    padding-bottom: 12px;
+    margin-top: 12px;
   }
   p {
+    padding-top: 12px;
     padding-bottom: 32px;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
   }
   .buttons {
     display: flex;
@@ -24,6 +26,7 @@ const AskModalBlock = styled.div`
     gap: 12px;
     button {
       min-width: 56px;
+      margin-top: 12px;
     }
   }
 `;

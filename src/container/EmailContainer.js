@@ -8,24 +8,11 @@ import AskModal from '../components/common/AskModal';
 // import { useNavigate } from 'react-router-dom';
 
 export default function EmailContainer() {
-  const subject = useSelector((state) => {
-    return state.email.subject;
-  });
-  const body = useSelector((state) => {
-    return state.email.body;
-  });
-  const name = useSelector((state) => {
-    return state.email.name;
-  });
   const email = useSelector((state) => {
-    return state.email.email;
+    return state.email;
   });
   const loading = useSelector((state) => {
     return state.loading['email/EMAIL_SEND'];
-  });
-
-  const data = useSelector((state) => {
-    return state.email;
   });
 
   const dispatch = useDispatch();
@@ -36,41 +23,42 @@ export default function EmailContainer() {
     },
     [dispatch],
   );
-
+  const [reset, setReset] = useState(false);
   const [modal1, setModal1] = useState(false);
-  const [modal2, setModal2] = useState(false);
-  const [modalMsg, setModalMsg] = useState('메일을 보냈습니다.');
+  const [modal2, setModal2] = useState({ visible: false, msg: '' });
   const onConfirm = () => {
     setModal1(false);
     dispatch(startLoading('email/EMAIL_SEND'));
 
-    // emailjs
-    //   .send('service_o7lwk6b', 'template_m3dj4oh', data, {
-    //     publicKey: 'aoNhrtEijjgKex6Im',
-    //   })
-    //   .then(
-    //     () => {
-    //       dispatch(initialize());
-    //       dispatch(finishLoading('email/EMAIL_SEND'));
-    //       setModal2(true);
-    // dispatch(initialize());
-    //     },
-    //     (error) => {
-    //       console.log('실패...', error);
-    //       dispatch(finishLoading('email/EMAIL_SEND'));
-    //       setModal2(true);
-    //       setModalMsg(error.text);
-    // dispatch(initialize());
-    //     },
-    //   );
-    setTimeout(() => {
-      dispatch(finishLoading('email/EMAIL_SEND'));
-      setModal2(true);
-      dispatch(initialize());
-    }, 5000);
+    emailjs
+      .send('service_o7lwk6b', 'template_m3dj4oh', email, {
+        publicKey: 'aoNhrtEijjgKex6Im',
+      })
+      .then(
+        () => {
+          dispatch(initialize());
+          dispatch(finishLoading('email/EMAIL_SEND'));
+          setModal2({ visible: true, msg: '메일을 보냈습니다.' });
+          dispatch(initialize());
+          setReset(true);
+        },
+        (error) => {
+          console.log('실패...', error);
+          dispatch(finishLoading('email/EMAIL_SEND'));
+          setModal2({ visible: true, msg: error.text });
+          dispatch(initialize());
+        },
+      );
+
+    // setTimeout(() => {
+    //   dispatch(finishLoading('email/EMAIL_SEND'));
+    //   setModal2({ visible: true, msg: '메일을 보냈습니다.' });
+    //   dispatch(initialize());
+    //   setReset(true);
+    // }, 3000);
   };
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = () => {
+    // e.preventDefault();
     setModal1(true);
   };
 
@@ -83,13 +71,11 @@ export default function EmailContainer() {
   return (
     <div>
       <EmailForm
-        subject={subject}
-        body={body}
-        name={name}
         email={email}
         onChangeField={onChangeField}
         onSubmit={onSubmit}
         loading={loading}
+        resetForm={reset}
       />
       <AskModal
         visble={modal1}
@@ -101,12 +87,12 @@ export default function EmailContainer() {
         type="confirm"
       />
       <AskModal
-        visble={modal2}
-        description={modalMsg}
+        visble={modal2.visible}
+        description={modal2.msg}
         cancelTxt="취소"
         confirmTxt="확인"
-        onCancel={() => setModal2(false)}
-        onConfirm={() => setModal2(false)}
+        onCancel={() => setModal2(false, '')}
+        onConfirm={() => setModal2(false, '')}
         type="confirm"
       />
     </div>

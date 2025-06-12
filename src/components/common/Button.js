@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
-import '/node_modules/open-color/open-color.css';
 
 const buttonStyle = css`
   border: none;
@@ -40,6 +39,18 @@ const buttonStyle = css`
       font-weight: 700;
       width: 100%;
     `}
+  ${(props) =>
+    props.$func &&
+    css`
+      font-weight: 700;
+      width: 100%;
+      background: var(--oc-indigo-9);
+      color: var(--oc-white);
+      height: 56px;
+      &:hover {
+        background: var(--oc-indigo-8);
+      }
+    `}
 `;
 const StyleButton = styled.button`
   ${buttonStyle}
@@ -56,6 +67,7 @@ export default function Button({
   onClick,
   to,
   disabled,
+  func,
 }) {
   return (
     <>
@@ -63,6 +75,7 @@ export default function Button({
         <StyleLink
           $fullwidth={fullType}
           className={className}
+          $func={func}
           to={to}
           disabled={disabled}
         >
@@ -71,6 +84,7 @@ export default function Button({
       ) : (
         <StyleButton
           $fullwidth={fullType}
+          $func={func}
           className={className}
           onClick={onClick}
           disabled={disabled}

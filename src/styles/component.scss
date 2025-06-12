@@ -69,6 +69,7 @@
   background-color: var(--oc-white);
   left: 28px;
   transform: rotate(180deg);
+  transition: 0.2s linear;
 }
 
 @media (max-width: 768px) {

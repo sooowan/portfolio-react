@@ -62,11 +62,11 @@ export default function EmailContainer() {
     setModal1(true);
   };
 
-  useEffect(() => {
-    return () => {
-      dispatch(initialize());
-    };
-  }, [dispatch]);
+  // useEffect(() => {
+  //   return () => {
+  //     dispatch(initialize());
+  //   };
+  // }, [dispatch]);
 
   return (
     <div>

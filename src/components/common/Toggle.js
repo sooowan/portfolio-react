@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import '../../styles/component.scss';
 import darkmodeIcon from '../img/dark-mode.svg';
 
-const SwitchBlock = styled.div`
+const ToggleBlock = styled.div`
   ${(props) =>
     props.$darkmode &&
     css`
@@ -18,15 +18,15 @@ const SwitchBlock = styled.div`
     `}
 `;
 
-export default function Switch({
-  title,
+export default function Toggle({
+  children,
   defaultChecked,
   hanleClickTheme,
   darkmode,
 }) {
   return (
-    <SwitchBlock className="switch-wrap" $darkmode={darkmode}>
-      <span className="switch-name">{title}</span>
+    <ToggleBlock className="switch-wrap" $darkmode={darkmode}>
+      <span className="switch-name">{children}</span>
       <div className="switch-btn">
         <input
           type="checkbox"
@@ -35,9 +35,9 @@ export default function Switch({
           onChange={hanleClickTheme}
         />
         <label htmlFor="switch_theme" className="switch-label">
-          <span className="hidden">{title}</span>
+          <span className="hidden">{children}</span>
         </label>
       </div>
-    </SwitchBlock>
+    </ToggleBlock>
   );
 }

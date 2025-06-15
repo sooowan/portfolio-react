@@ -9,9 +9,9 @@ const MainTitleBlock = styled.h1`
 `;
 const SubTitleBlock = styled.h2``;
 
-export function MainTitle({ title }) {
-  return <MainTitleBlock>{title}</MainTitleBlock>;
+export function MainTitle({ children }) {
+  return <MainTitleBlock>{children}</MainTitleBlock>;
 }
-export function SubTitle({ title }) {
-  return <SubTitleBlock>{title}</SubTitleBlock>;
+export function SubTitle({ children }) {
+  return <SubTitleBlock>{children}</SubTitleBlock>;
 }

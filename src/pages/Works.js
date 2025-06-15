@@ -7,7 +7,7 @@ export default function Works() {
       <Helmet>
         <title>Works</title>
       </Helmet>
-      <MainTitle title="My Works" />
+      <MainTitle>My Works</MainTitle>
     </div>
   );
 }

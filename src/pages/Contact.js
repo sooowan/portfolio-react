@@ -8,7 +8,7 @@ export default function Contact() {
       <Helmet>
         <title>Contact</title>
       </Helmet>
-      <MainTitle title="Contact me" />
+      <MainTitle>Contact me</MainTitle>
       <EmailContainer />
     </div>
   );

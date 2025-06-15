@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import mystyle from '../../styles/Side.module.css';
 import classNames from 'classnames/bind';
 import { useState } from 'react';
-import Switch from './Switch';
+import Toggle from './Toggle';
 import info from '../pages';
 import '../../styles/component.scss';
 
@@ -33,9 +33,8 @@ export default function Side({ title = info.title }) {
         ))}
       </aside>
       <div className={cn('footer')}>
-        <Switch
+        <Toggle
           darkmode="true"
-          title="Dark Mode"
           defaultChecked={'dark' === theme}
           hanleClickTheme={() => setTheme(theme === 'dark' ? '' : 'dark')}
         />

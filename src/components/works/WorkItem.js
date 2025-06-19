@@ -1,20 +1,28 @@
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import BackgroundLottie from '../img/BackgroundLottie';
 const WorkItemBlock = styled.li`
+  width: 320px;
+  height: 320px;
+  @media (max-width: 991px) {
+    width: 100%;
+    max-width: 320px;
+  }
   a {
     position: relative;
-    width: 280px;
-    height: 280px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
   }
-  .work-title {
+  .work-header {
     position: relative;
-    height: 32%;
+    height: 28%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background: var(--df-hover);
+    overflow: hidden;
     &.gradient {
       background: linear-gradient(
         100deg,
@@ -26,12 +34,25 @@ const WorkItemBlock = styled.li`
     &.solid_indigo {
       background: var(--oc-indigo-5);
     }
+    &.lottie {
+      background: transparent;
+    }
+  }
+  .work-content {
+    position: relative;
+    flex: auto;
+    background: var(--df-bg);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 82px 24px 24px 24px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     .title-box {
       position: absolute;
       display: flex;
       flex-direction: column;
       left: 24px;
-      top: calc(100% - 2rem);
+      top: -2rem;
       width: calc(100% - 40px);
       gap: 12px;
     }
@@ -47,19 +68,13 @@ const WorkItemBlock = styled.li`
       line-height: 1.8rem;
       word-break: break-all;
     }
-  }
-  .work-content {
-    flex: auto;
-    background: var(--df-bg);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    padding: 82px 24px 24px 24px;
-    font-size: 1.1rem;
     .tag-list {
       margin-top: 12px;
       display: flex;
-      gap: 10px;
+      gap: 8px;
       font-size: 1rem;
+      line-height: 1.2rem;
+      flex-wrap: wrap;
     }
     .tag-list,
     p {
@@ -72,14 +87,15 @@ export default function WorkItem({ work }) {
   return (
     <WorkItemBlock>
       <Link to={link} target="_blank">
-        <div className={classNames('work-title', style ? style : '')}>
+        <div className={classNames('work-header', style ? style : '')}>
+          {style === 'lottie' && <BackgroundLottie />}
+        </div>
+        <div className="work-content">
           <div className="title-box">
             <span className="title-ico">{title.ico}</span>
             <h4 className="title-text">{title.text}</h4>
           </div>
-        </div>
-        <div className="work-content">
-          <p>{desc}</p>
+          <p dangerouslySetInnerHTML={{ __html: desc }} />
           <div className="tag-list">
             {tags.map((tag) => (
               <span key={tag}>#{tag}</span>

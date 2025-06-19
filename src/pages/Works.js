@@ -10,18 +10,42 @@ const WorkListBlock = styled.ul`
   align-items: center;
   list-style: none;
   margin: 32px 0 42px;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
 `;
 
 const works = [
   {
+    _id: '000',
+    link: 'https://duddoi.github.io/portfolio-react/',
+    title: {
+      ico: '😈',
+      text: 'REACT_PORTFOLIO',
+    },
+    desc: '리액트 기반 포트폴리오입니다.<br>(2025 ver.)',
+    tags: [
+      'React',
+      'redux',
+      'localStorage',
+      'styled-components',
+      'EmailJS',
+      'CSS-Module',
+      'react-router',
+      'lottie',
+    ],
+    style: 'lottie',
+  },
+  {
     _id: '001',
     link: 'https://duddoi.github.io/todo-app/',
     title: {
-      ico: '😈',
+      ico: '🗒️',
       text: 'TO-DO APP',
     },
-    desc: '여기는 설명입니다.',
-    tags: ['리액트', 'React'],
+    desc: '리액트 프로젝트 to-do app입니다.',
+    tags: ['React', 'localStorage', 'styled-components'],
     style: 'gradient',
   },
   {
@@ -31,9 +55,14 @@ const works = [
       ico: '✍🏻',
       text: 'BOLG',
     },
-    desc: '여기는 설명입니다.',
-    tags: ['리액트', 'React'],
-    // style: 'solid_gray',
+    desc: '리액트 프로젝트 블로그 app입니다.',
+    tags: [
+      'React',
+      'redux',
+      'localStorage',
+      'styled-components',
+      'react-router',
+    ],
   },
   {
     _id: '003',
@@ -42,8 +71,8 @@ const works = [
       ico: '🌈',
       text: '2022_PORTFOLIO',
     },
-    desc: '여기는 설명입니다.',
-    tags: ['리액트', 'React'],
+    desc: '이전 진행한 프로젝트 기반으로 만든 포트폴리오입니다.(2022 ver.)',
+    tags: ['html', 'css', 'javascript'],
     style: 'solid_indigo',
   },
 ];

@@ -7,10 +7,7 @@ import { formatDate } from '../../lib/format';
 const EmailFormBlock = styled.form`
   width: 100%;
   max-width: 768px;
-  margin: 80px auto 0;
-  @media (max-width: 768px) {
-    margin: 32px auto 40px;
-  }
+  margin: 40px 0 0;
 `;
 
 const StyleLabel = styled.label`

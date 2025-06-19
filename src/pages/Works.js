@@ -9,7 +9,7 @@ const WorkListBlock = styled.ul`
   gap: 24px;
   align-items: center;
   list-style: none;
-  margin-top: 32px;
+  margin: 32px 0 42px;
 `;
 
 const works = [

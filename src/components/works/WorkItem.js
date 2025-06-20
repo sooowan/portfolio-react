@@ -35,7 +35,7 @@ const WorkItemBlock = styled.li`
       background: var(--oc-indigo-5);
     }
     &.lottie {
-      background: transparent;
+      background: var(--oc-pink-5);
     }
   }
   .work-content {

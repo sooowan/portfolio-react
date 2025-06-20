@@ -1,10 +1,10 @@
 import Lottie from 'react-lottie';
-import lottie_wave from './lotties/lottie_wave.json';
+import lottie_bubble from './lotties/lottie_bubble.json';
 
 const defaultOptions = {
   loop: true,
   autoplay: true,
-  animationData: lottie_wave,
+  animationData: lottie_bubble,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
@@ -12,7 +12,7 @@ const defaultOptions = {
 };
 
 const initStyle = {
-  width: '100%',
+  width: '50%',
   height: '100%',
   pointerEvents: 'none',
 };

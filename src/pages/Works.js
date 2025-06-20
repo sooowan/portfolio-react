@@ -21,7 +21,7 @@ const works = [
     _id: '000',
     link: 'https://duddoi.github.io/portfolio-react/',
     title: {
-      ico: '😈',
+      ico: '🥳',
       text: 'REACT_PORTFOLIO',
     },
     desc: '리액트 기반 포트폴리오입니다.<br>(2025 ver.)',
@@ -31,7 +31,7 @@ const works = [
       'localStorage',
       'styled-components',
       'EmailJS',
-      'CSS-Module',
+      'CSSModule',
       'react-router',
       'lottie',
     ],
@@ -64,17 +64,17 @@ const works = [
       'react-router',
     ],
   },
-  {
-    _id: '003',
-    link: 'https://duddoi.github.io/2022_portfolio/',
-    title: {
-      ico: '🌈',
-      text: '2022_PORTFOLIO',
-    },
-    desc: '이전 진행한 프로젝트 기반으로 만든 포트폴리오입니다.(2022 ver.)',
-    tags: ['html', 'css', 'javascript'],
-    style: 'solid_indigo',
-  },
+  // {
+  //   _id: '003',
+  //   link: 'https://duddoi.github.io/2022_portfolio/',
+  //   title: {
+  //     ico: '🌈',
+  //     text: '2022_PORTFOLIO',
+  //   },
+  //   desc: '이전 진행한 프로젝트 기반으로 만든 포트폴리오입니다.(2022 ver.)',
+  //   tags: ['html', 'css', 'javascript'],
+  //   style: 'solid_indigo',
+  // },
 ];
 
 export default function Works() {

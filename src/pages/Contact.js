@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { MainTitle, SubTitle } from '../components/common/Titles';
+import { MainTitle, SubText, SubTitle } from '../components/common/Titles';
 import EmailContainer from '../container/EmailContainer';
 import { Helmet } from 'react-helmet-async';
 
@@ -42,6 +42,7 @@ export default function Contact() {
         </li>
       </InfoBlock>
       <SubTitle>Send Email</SubTitle>
+      <SubText>이메일을 전송해 보세요!</SubText>
       <EmailContainer />
     </div>
   );

@@ -11,7 +11,7 @@ const WorkListBlock = styled.ul`
   list-style: none;
   margin: 32px 0 42px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1114px) {
     flex-direction: column;
   }
 `;
@@ -24,7 +24,7 @@ const works = [
       ico: '🥳',
       text: 'REACT_PORTFOLIO',
     },
-    desc: '리액트 기반 포트폴리오입니다.<br>(2025 ver.)',
+    desc: '리액트 기반 포트폴리오입니다.(2025 ver.)',
     tags: [
       'React',
       'redux',
@@ -34,7 +34,10 @@ const works = [
       'CSSModule',
       'react-router',
       'lottie',
+      'dark-mode',
     ],
+    detail:
+      'Notion을 모티브로 디자인 구상을 하였으며, 다크모드 및 EmailJS API를 이용한 이메일 발송 기능 구현.',
     style: 'lottie',
   },
   {
@@ -52,6 +55,8 @@ const works = [
       'styled-components',
       'react-router',
     ],
+    detail:
+      '블로그의 간단한 기능 구현: 회원가입, 로그인, 글쓰기, 수정, 삭제, 내용보기, 태그 필터링, 페이징 처리, 유효성 검사 등. (수정 및 삭제는 본인이 쓴 글에 한함)',
     style: 'gradient',
   },
   {
@@ -63,6 +68,7 @@ const works = [
     },
     desc: '리액트 프로젝트 to-do app입니다.',
     tags: ['React', 'localStorage', 'styled-components'],
+    detail: '할 일을 추가/완료/삭제 할 수 있는 todo list.',
   },
 
   // {

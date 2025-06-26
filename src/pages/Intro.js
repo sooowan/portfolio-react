@@ -6,8 +6,7 @@ import { Helmet } from 'react-helmet-async';
 import MyCalendar from '../components/calendar/MyCalendar';
 
 const HomeBlock = styled.div`
-  width: 100%;
-  height: 100%;
+  margin-bottom: 42px;
   .header {
     position: relative;
     left: 0;
@@ -26,43 +25,61 @@ const HomeBlock = styled.div`
   }
   .content {
     position: relative;
-    padding: 60px 24px 24px 24px;
+    padding: 50px 24px 24px 24px;
     margin: 0 auto;
     width: 100%;
     max-width: 780px;
     font-size: 1.2rem;
     line-height: 1.4rem;
-    .title-ico {
-      position: absolute;
-      left: 24px;
-      top: -2.5rem;
-      width: calc(100% - 48px);
-      font-size: 5rem;
-      display: inline-flex;
-      align-items: center;
-      width: 5rem;
-      height: 5rem;
-    }
     .title {
-      font-size: 1.6rem;
-      line-height: 2rem;
-      word-break: break-all;
+      display: inline-flex;
+      justify-content: flex-start;
+      padding-bottom: 12px;
+      .title-ico {
+        position: absolute;
+        left: 24px;
+        top: -2.5rem;
+        width: calc(100% - 48px);
+        font-size: 5rem;
+        display: inline-flex;
+        align-items: center;
+        height: 5rem;
+      }
+      h4 {
+        display: inline-block;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        word-break: break-all;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: appear 1.5s steps(100, end);
+      }
     }
-    .tag-list {
-      margin-top: 12px;
-      display: flex;
-      gap: 8px;
-      font-size: 1rem;
-      line-height: 1.2rem;
-      flex-wrap: wrap;
-    }
-    .tag-list,
+
     p {
       opacity: 0.8;
+      text-align: right;
+    }
+
+    a {
+      font-family: 'JetBrains Mono', 'Nanum Gothic';
+    }
+    @keyframes appear {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
     }
   }
 `;
-
+const ButtonGrp = styled.div`
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+`;
 export default function Home() {
   return (
     <HomeBlock>
@@ -73,17 +90,20 @@ export default function Home() {
         <HomeLottie />
       </div>
       <div className="content">
-        <h4 className="title">
-          <span className="title-ico">🍅</span>
-          안녕하세요! <br /> 저의 포트폴리오 페이지에 오신 것을 환영합니다!
-        </h4>
+        <div className="title">
+          <span className="title-ico">🍅🍅🍅</span>
+          <h4>안녕하세요! 이영애입니다.</h4>
+        </div>
         <MyCalendar />
-        <Button to="/contact" className="large">
-          CONTACT ME
-        </Button>
+        <ButtonGrp>
+          <Button func={true} to="/works" className="large">
+            VIEW WORKS
+          </Button>
+          <Button to="/contact" className="large">
+            CONTACT ME
+          </Button>
+        </ButtonGrp>
       </div>
-      {/*  */}
-      {/* <h1>Welcome to my page!</h1> */}
     </HomeBlock>
   );
 }

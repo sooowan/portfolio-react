@@ -3,11 +3,14 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import BackgroundLottie from '../img/BackgroundLottie';
 const WorkItemBlock = styled.li`
-  width: 320px;
-  height: 320px;
-  @media (max-width: 991px) {
+  width: 380px;
+  height: 380px;
+  @media (max-width: 1114px) {
     width: 100%;
-    max-width: 320px;
+    max-width: 380px;
+  }
+  @media (max-width: 768px) {
+    max-height: 340px;
   }
   a {
     position: relative;
@@ -47,9 +50,12 @@ const WorkItemBlock = styled.li`
     padding: 48px 24px 24px 24px;
     font-size: 1.2rem;
     line-height: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .title {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       line-height: 1.8rem;
       word-break: break-all;
       padding-bottom: 12px;
@@ -68,19 +74,31 @@ const WorkItemBlock = styled.li`
     .tag-list {
       margin-top: 12px;
       display: flex;
-      gap: 8px;
-      font-size: 1rem;
+      gap: 6px;
+      font-size: 0.9rem;
       line-height: 1.2rem;
       flex-wrap: wrap;
+      opacity: 0.7;
     }
-    .tag-list,
     p {
-      opacity: 0.8;
+      &.desc {
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+      &.detail {
+        opacity: 0.8;
+        padding: 10px;
+        background: var(--oc-gray-3);
+        border-radius: 8px;
+        margin-top: 12px;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+      }
     }
   }
 `;
 export default function WorkItem({ work }) {
-  const { link, title, desc, tags, style } = work;
+  const { link, title, desc, tags, style, detail } = work;
   return (
     <WorkItemBlock>
       <Link to={link} target="_blank">
@@ -88,16 +106,24 @@ export default function WorkItem({ work }) {
           {style === 'lottie' && <BackgroundLottie />}
         </div>
         <div className="work-content">
-          <h4 className="title">
-            <span className="title-ico">{title.ico}</span>
-            {title.text}
-          </h4>
-          <p dangerouslySetInnerHTML={{ __html: desc }} />
-          <div className="tag-list">
-            {tags.map((tag) => (
-              <span key={tag}>#{tag}</span>
-            ))}
+          <div>
+            <h4 className="title">
+              <span className="title-ico">{title.ico}</span>
+              {title.text}
+            </h4>
+            <p className="desc" dangerouslySetInnerHTML={{ __html: desc }} />
+            <div className="tag-list">
+              {tags.map((tag) => (
+                <span key={tag}>#{tag}</span>
+              ))}
+            </div>
           </div>
+          {detail && (
+            <p
+              className="detail"
+              dangerouslySetInnerHTML={{ __html: detail }}
+            />
+          )}
         </div>
       </Link>
     </WorkItemBlock>

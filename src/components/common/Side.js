@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import mystyle from '../../styles/Side.module.css';
+import mystyle from '../../styles/Side.module.scss';
 import classNames from 'classnames/bind';
 import { useState } from 'react';
 import Toggle from './Toggle';

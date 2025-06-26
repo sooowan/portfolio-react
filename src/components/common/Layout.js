@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import classNames from 'classnames/bind';
-import mystyle from '../../styles/Main.module.css';
+import mystyle from '../../styles/Main.module.scss';
 import '../../styles/font.scss';
 import Side from './Side';
 import Intro from '../../pages/Intro';

@@ -144,7 +144,7 @@ export default function EmailForm({ onChangeField, onSubmit, resetForm }) {
           <textarea id="text" {...register('body')} />
           <StyleLabel htmlFor="text">Message</StyleLabel>
         </TextAreaBlock>
-        <Button func="true" type="submit">
+        <Button func={true} fullType={true} type="submit">
           이메일 보내기
         </Button>
       </EmailFormBlock>

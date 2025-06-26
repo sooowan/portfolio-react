@@ -12,16 +12,19 @@ const buttonStyle = css`
   min-width: 72px;
   margin-top: 32px;
   transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-
   &.small {
     font-size: 1rem;
+    line-height: 1.2rem;
     padding: 6px;
   }
   &.large {
-    font-size: 1.6rem;
-    padding: 14px 24px;
-    min-width: 120px;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding: 12px 18px;
   }
   &:hover {
     background: var(--df-hover);
@@ -36,17 +39,18 @@ const buttonStyle = css`
   ${(props) =>
     props.$fullwidth &&
     css`
+      font-size: 1.4rem;
+      line-height: 2.2rem;
       font-weight: 700;
       width: 100%;
+      height: 56px;
     `}
   ${(props) =>
     props.$func &&
     css`
       font-weight: 700;
-      width: 100%;
       background: var(--oc-indigo-9);
       color: var(--oc-white);
-      height: 56px;
       &:hover {
         background: var(--oc-indigo-8);
       }
@@ -57,7 +61,7 @@ const StyleButton = styled.button`
 `;
 const StyleLink = styled(Link)`
   ${buttonStyle};
-  display: inline-block;
+  display: inline-flex;
 `;
 
 export default function Button({

@@ -4,7 +4,7 @@ const info = {
     {
       id: '1',
       path: '/',
-      name: '🏠\u00A0\u00A0 Home',
+      name: '🏠\u00A0\u00A0 Intro',
     },
     {
       id: '2',

@@ -14,7 +14,7 @@ const defaultOptions = {
 
 const initStyle = {
   width: '100%',
-  height: '500px',
+  height: '100%',
   margin: '0 auto',
   pointerEvents: 'none',
 };
@@ -35,11 +35,7 @@ const HomeLottie = () => {
       window.removeEventListener('resize', resizeWindow);
     };
   }, []);
-  return (
-    <div>
-      <Lottie options={defaultOptions} style={styleTit} />
-    </div>
-  );
+  return <Lottie options={defaultOptions} style={styleTit} />;
 };
 
 export default HomeLottie;

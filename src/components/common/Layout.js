@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import mystyle from '../../styles/Main.module.css';
 import '../../styles/font.scss';
 import Side from './Side';
-import Home from '../../pages/Home';
+import Intro from '../../pages/Intro';
 import Works from '../../pages/Works';
 import Contact from '../../pages/Contact';
 import info from '../pages';
@@ -34,7 +34,6 @@ export default function Layout() {
   const loading = useSelector((state) => {
     return state.loading['email/EMAIL_SEND'];
   });
-
   return (
     <LayoutBlock>
       <Side />
@@ -43,11 +42,11 @@ export default function Layout() {
           <span className={cn('tab-on')}>{tabName}</span>
         </div>
         <div
-          className={cn('content-wrap')}
+          className={cn('content-wrap', path === '/' && 'attach')}
           style={loading ? { overflow: 'hidden' } : { overflow: 'auto' }}
         >
           <Routes>
-            <Route path="/" index element={<Home />} />
+            <Route path="/" index element={<Intro />} />
             <Route path="/works" element={<Works />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

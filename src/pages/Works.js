@@ -39,17 +39,6 @@ const works = [
   },
   {
     _id: '001',
-    link: 'https://duddoi.github.io/todo-app/',
-    title: {
-      ico: '🗒️',
-      text: 'TO-DO APP',
-    },
-    desc: '리액트 프로젝트 to-do app입니다.',
-    tags: ['React', 'localStorage', 'styled-components'],
-    style: 'gradient',
-  },
-  {
-    _id: '002',
     link: 'https://duddoi.github.io/blog/',
     title: {
       ico: '✍🏻',
@@ -63,7 +52,19 @@ const works = [
       'styled-components',
       'react-router',
     ],
+    style: 'gradient',
   },
+  {
+    _id: '002',
+    link: 'https://duddoi.github.io/todo-app/',
+    title: {
+      ico: '🗒️',
+      text: 'TO-DO APP',
+    },
+    desc: '리액트 프로젝트 to-do app입니다.',
+    tags: ['React', 'localStorage', 'styled-components'],
+  },
+
   // {
   //   _id: '003',
   //   link: 'https://duddoi.github.io/2022_portfolio/',

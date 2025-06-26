@@ -44,29 +44,26 @@ const WorkItemBlock = styled.li`
     background: var(--df-bg);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 82px 24px 24px 24px;
+    padding: 48px 24px 24px 24px;
     font-size: 1.2rem;
     line-height: 1.4rem;
-    .title-box {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      left: 24px;
-      top: -2rem;
-      width: calc(100% - 40px);
-      gap: 12px;
+
+    .title {
+      font-size: 1.3rem;
+      line-height: 1.8rem;
+      word-break: break-all;
+      padding-bottom: 12px;
     }
     .title-ico {
+      position: absolute;
+      left: 24px;
+      top: -2rem;
+      width: calc(100% - 48px);
       font-size: 4rem;
       display: inline-flex;
       align-items: center;
       width: 4rem;
       height: 4rem;
-    }
-    .title-text {
-      font-size: 1.3rem;
-      line-height: 1.8rem;
-      word-break: break-all;
     }
     .tag-list {
       margin-top: 12px;
@@ -91,10 +88,10 @@ export default function WorkItem({ work }) {
           {style === 'lottie' && <BackgroundLottie />}
         </div>
         <div className="work-content">
-          <div className="title-box">
+          <h4 className="title">
             <span className="title-ico">{title.ico}</span>
-            <h4 className="title-text">{title.text}</h4>
-          </div>
+            {title.text}
+          </h4>
           <p dangerouslySetInnerHTML={{ __html: desc }} />
           <div className="tag-list">
             {tags.map((tag) => (

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import EmailForm from '../components/email/EmailForm';
 import { changeField, initialize } from '../modules/email';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { finishLoading, startLoading } from '../modules/loading';
 import AskModal from '../components/common/AskModal';

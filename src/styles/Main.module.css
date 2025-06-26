@@ -15,6 +15,9 @@
   height: calc(100% - 48px);
   position: relative;
 }
+.content-wrap.attach {
+  padding: 0;
+}
 .tab-on {
   display: inline-block;
   min-width: 240px;

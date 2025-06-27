@@ -15,9 +15,9 @@ const SubTitleBlock = styled.h2`
 `;
 const SubTextBlock = styled.span`
   display: inline-block;
-  margin-top: 10px;
-  font-size: 1.2rem;
-  line-height: 1.6rem;
+  margin-top: 6px;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
   opacity: 0.6;
 `;
 

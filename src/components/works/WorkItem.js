@@ -88,7 +88,7 @@ const WorkItemBlock = styled.li`
       &.detail {
         opacity: 0.8;
         padding: 10px;
-        background: var(--oc-gray-3);
+        background: var(--df-hover);
         border-radius: 8px;
         margin-top: 12px;
         font-size: 0.9rem;

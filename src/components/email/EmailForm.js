@@ -127,7 +127,7 @@ export default function EmailForm({ onChangeField, onSubmit, resetForm }) {
             })}
             type="email"
           />
-          <StyleLabel htmlFor="email">Email</StyleLabel>
+          <StyleLabel htmlFor="email">E-mail</StyleLabel>
           {errors.email && <ErrMsg>{errors.email.message}</ErrMsg>}
         </InputBlock>
         <InputBlock>

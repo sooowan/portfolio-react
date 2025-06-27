@@ -41,7 +41,7 @@ export default function Contact() {
           <a href="mailto:iseeuhh@gmail.com">iseeuhh@gmail.com</a>
         </li>
       </InfoBlock>
-      <SubTitle>Send Email</SubTitle>
+      <SubTitle>Send E-mail</SubTitle>
       <SubText>이메일을 전송해 보세요!</SubText>
       <EmailContainer />
     </div>

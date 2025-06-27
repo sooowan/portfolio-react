@@ -33,6 +33,7 @@ const works = [
       'EmailJS',
       'CSSModule',
       'react-router',
+      'react-calendar',
       'lottie',
       'dark-mode',
     ],

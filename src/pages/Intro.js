@@ -4,8 +4,6 @@ import '../styles/font.scss';
 import Button from '../components/common/Button';
 import { Helmet } from 'react-helmet-async';
 import MyCalendar from '../components/calendar/MyCalendar';
-import '../App.css';
-import '../logo.svg';
 
 const HomeBlock = styled.div`
   margin-bottom: 42px;
@@ -90,7 +88,6 @@ export default function Home() {
       </Helmet>
       <div className="header gradient">
         <HomeLottie />
-        <div className="App-logo"></div>
       </div>
       <div className="content">
         <div className="title">

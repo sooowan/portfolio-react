@@ -34,10 +34,7 @@ const works = [
       'CSSModule',
       'react-router',
       'react-calendar',
-      'react-select',
-      'CryptoJS',
       'lottie',
-      'uuid',
       'dark-mode',
     ],
     detail:
@@ -49,7 +46,7 @@ const works = [
     link: 'https://duddoi.github.io/blog/',
     title: {
       ico: '✍🏻',
-      text: 'BOLG',
+      text: 'BLOG',
     },
     desc: '리액트 프로젝트 블로그 app입니다.',
     tags: [
@@ -58,9 +55,12 @@ const works = [
       'localStorage',
       'styled-components',
       'react-router',
+      'react-select',
+      'CryptoJS',
+      'uuid',
     ],
     detail:
-      '블로그의 간단한 기능 구현: 회원가입, 로그인, 글쓰기, 수정, 삭제, 내용보기, 태그 필터링, 페이징 처리, 유효성 검사 등. (수정 및 삭제는 본인이 쓴 글에 한함)',
+      '블로그의 기본 기능 구현: 회원가입, 로그인, 글쓰기, 수정, 삭제, 내용보기, 태그 필터링, 페이징 처리, 유효성 검사 등. (수정 및 삭제는 본인이 쓴 글에 한함)',
     style: 'gradient',
   },
   {
@@ -75,17 +75,19 @@ const works = [
     detail: '할 일을 추가/완료/삭제 할 수 있는 todo list.',
   },
 
-  // {
-  //   _id: '003',
-  //   link: 'https://duddoi.github.io/2022_portfolio/',
-  //   title: {
-  //     ico: '🌈',
-  //     text: '2022_PORTFOLIO',
-  //   },
-  //   desc: '이전 진행한 프로젝트 기반으로 만든 포트폴리오입니다.(2022 ver.)',
-  //   tags: ['html', 'css', 'javascript'],
-  //   style: 'solid_indigo',
-  // },
+  {
+    _id: '003',
+    link: 'https://duddoi.github.io/2022_portfolio/',
+    title: {
+      ico: '🌈',
+      text: '2022_PORTFOLIO',
+    },
+    desc: '2019-2021년 진행한 프로젝트들입니다.(2022 ver.)',
+    tags: ['HTML', 'CSS', 'jquery', 'photoshop', 'illustrator'],
+    detail:
+      'html, css, jquery를 이용한 퍼블리싱 작업으로 이루어진 full page형태의 포트폴리오.',
+    style: 'solid_indigo',
+  },
 ];
 
 export default function Works() {

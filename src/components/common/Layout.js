@@ -10,19 +10,22 @@ import Contact from '../../pages/Contact';
 import info from '../pages';
 import { useSelector } from 'react-redux';
 import SendingLottie from '../img/SendingLottie';
+import { useEffect, useRef } from 'react';
 
 const cn = classNames.bind(mystyle);
 const pages = info.pages;
 const LayoutBlock = styled.div`
   display: flex;
   @media (max-width: 768px) {
-    flex-direction: column;
+    display: block;
   }
 `;
 
 export default function Layout() {
   const location = useLocation();
   const path = location.pathname;
+  const scrollRef = useRef(null);
+
   const tabName = pages.map((page) => {
     if (page.path === path) {
       return page.name;
@@ -34,6 +37,11 @@ export default function Layout() {
   const loading = useSelector((state) => {
     return state.loading['email/EMAIL_SEND'];
   });
+
+  useEffect(() => {
+    scrollRef.current.scrollTo(0, 0);
+  }, [path]);
+
   return (
     <LayoutBlock>
       <Side />
@@ -44,6 +52,7 @@ export default function Layout() {
         <div
           className={cn('content-wrap', path === '/' && 'attach')}
           style={loading ? { overflow: 'hidden' } : { overflow: 'auto' }}
+          ref={scrollRef}
         >
           <Routes>
             <Route path="/" index element={<Intro />} />

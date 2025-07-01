@@ -91,7 +91,7 @@ export default function Home() {
       </div>
       <div className="content">
         <div className="title">
-          <span className="title-ico">🍅🍅🍅</span>
+          <span className="title-ico">🍅</span>
           <h4>안녕하세요! 이영애입니다.</h4>
         </div>
         <MyCalendar />

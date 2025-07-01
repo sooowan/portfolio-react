@@ -34,7 +34,10 @@ const works = [
       'CSSModule',
       'react-router',
       'react-calendar',
+      'react-select',
+      'CryptoJS',
       'lottie',
+      'uuid',
       'dark-mode',
     ],
     detail:

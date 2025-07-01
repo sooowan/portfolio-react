@@ -13,13 +13,17 @@ function MyCalendar() {
   const year = date.getFullYear();
   const month = date.getMonth() + 1; // 월은 0부터 시작하므로 +1
   const day = date.getDate();
+  const dayOfWeek = date.getDay();
+
+  const days = ['일', '월', '화', '수', '목', '금', '토'];
+  const koreanDayOfWeek = days[dayOfWeek];
 
   return (
     <div className="my-calendar-wrap">
       <p className="date">
         오늘은
         <span>
-          {year}년 {month}월 {day}일
+          {year}년 {month}월 {day}일 {koreanDayOfWeek}요일
         </span>
         입니다.
       </p>

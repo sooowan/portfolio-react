@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import EmailForm from '../components/email/EmailForm';
+import EmailForm from '../components/widget/EmailForm';
 import { changeField, initialize } from '../modules/email';
 import { useCallback, useState } from 'react';
 import emailjs from '@emailjs/browser';

@@ -3,15 +3,16 @@
 
 .my-calendar-wrap {
   margin-top: 24px;
-  .date {
-    font-family: 'JetBrains Mono', 'Noto Sans KR';
-    span {
-      background: var(--oc-grape-1);
-      color: var(--oc-grape-9);
-      border-radius: 4px;
-      padding: 0 2px;
-      margin: 0 2px;
-    }
+}
+.my-calendar-date {
+  font-family: 'JetBrains Mono', 'Noto Sans KR';
+  margin-top: 24px;
+  span {
+    background: var(--oc-grape-1);
+    color: var(--oc-grape-9);
+    border-radius: 4px;
+    padding: 0 2px;
+    margin: 0 2px;
   }
 }
 

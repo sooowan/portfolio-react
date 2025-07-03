@@ -3,7 +3,8 @@ import HomeLottie from '../components/img/HomeLottie';
 import '../styles/font.scss';
 import Button from '../components/common/Button';
 import { Helmet } from 'react-helmet-async';
-import MyCalendar from '../components/calendar/MyCalendar';
+import { MyCalendar, Today } from '../components/widget/MyCalendar';
+import WeatherContainer from '../container/WeatherContainer';
 
 const HomeBlock = styled.div`
   margin-bottom: 42px;
@@ -62,7 +63,7 @@ const HomeBlock = styled.div`
     }
 
     a {
-      font-family: 'JetBrains Mono', 'Nanum Gothic';
+      font-family: 'JetBrains Mono';
     }
     @keyframes appear {
       from {
@@ -94,13 +95,19 @@ export default function Home() {
           <span className="title-ico">🍅</span>
           <h4>안녕하세요! 이영애입니다.</h4>
         </div>
+        <Today />
+        <WeatherContainer />
         <MyCalendar />
         <ButtonGrp>
           <Button func={true} to="/works" className="large">
             VIEW WORKS
           </Button>
-          <Button to="/contact" className="large">
-            CONTACT ME
+          <Button
+            to="https://eminent-horn-5a2.notion.site/2250caf43b8480eb8d04e38db25ed31c"
+            className="large"
+            target="_blank"
+          >
+            VIEW CAREER
           </Button>
         </ButtonGrp>
       </div>

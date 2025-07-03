@@ -49,10 +49,10 @@ const buttonStyle = css`
     props.$func &&
     css`
       font-weight: 700;
-      background: var(--oc-indigo-9);
+      background: var(--oc-grape-9);
       color: var(--oc-white);
       &:hover {
-        background: var(--oc-indigo-8);
+        background: var(--oc-grape-8);
       }
     `}
 `;

@@ -6,7 +6,7 @@ const GET_WEATHER = 'weather/GET_WEATHER';
 export const getWeatherApi = () => async (dispatch) => {
   const cityName = 'Seoul';
   const apiKey = process.env.REACT_APP_WEATHER_KEY;
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric&lang=kr`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   try {
     const res = await axios.get(url);
     dispatch({ type: GET_WEATHER, payload: res.data });
@@ -24,6 +24,7 @@ const initialState = {
   city: '',
   icon: null,
   humidity: 0,
+  feels_like: 0,
 };
 
 const weather = handleActions(
@@ -37,6 +38,7 @@ const weather = handleActions(
       city: payload.name,
       icon: payload.weather[0].icon,
       humidity: payload.main.humidity,
+      feels_like: payload.main.feels_like,
     }),
   },
   initialState,

@@ -1,5 +1,5 @@
 const info = {
-  title: '🧠\u00A0\u00A0 SOOWAN의 Portfolio',
+  title: 'SOOWAN의 Portfolio',
   pages: [
     {
       id: '1',

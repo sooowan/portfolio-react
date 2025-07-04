@@ -72,6 +72,7 @@ export default function Button({
   to,
   disabled,
   func,
+  newTab,
 }) {
   return (
     <>
@@ -82,6 +83,7 @@ export default function Button({
           $func={func}
           to={to}
           disabled={disabled}
+          target={newTab && '_blank'}
         >
           {children}
         </StyleLink>

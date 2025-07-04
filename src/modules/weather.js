@@ -10,7 +10,7 @@ export const getWeatherApi = () => async (dispatch) => {
   try {
     const res = await axios.get(url);
     dispatch({ type: GET_WEATHER, payload: res.data });
-    console.log(res.data);
+    // console.log(res.data);
   } catch (e) {
     console.log(e);
   }

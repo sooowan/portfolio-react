@@ -12,9 +12,12 @@ const HomeBlock = styled.div`
     position: relative;
     left: 0;
     top: 0;
-    height: 240px;
+    height: 280px;
     background: var(--df-hover);
     overflow: hidden;
+    @media (max-width: 375px) {
+      height: 200px;
+    }
     &.gradient {
       background: linear-gradient(
         90deg,
@@ -103,9 +106,9 @@ export default function Home() {
             VIEW WORKS
           </Button>
           <Button
+            newTab={true}
             to="https://eminent-horn-5a2.notion.site/2250caf43b8480eb8d04e38db25ed31c"
             className="large"
-            target="_blank"
           >
             VIEW CAREER
           </Button>

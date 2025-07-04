@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import BackgroundLottie from '../img/BackgroundLottie';
 const WorkItemBlock = styled.li`
   width: 380px;
-  height: 380px;
+  height: 420px;
   @media (max-width: 1114px) {
     width: 100%;
     max-width: 380px;
   }
   @media (max-width: 768px) {
-    max-height: 340px;
+    max-height: 390px;
   }
   a {
     position: relative;

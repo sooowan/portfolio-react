@@ -3,7 +3,7 @@ import mystyle from '../../styles/Side.module.scss';
 import classNames from 'classnames/bind';
 import { useState } from 'react';
 import Toggle from './Toggle';
-import info from '../pages';
+import { info } from '../data';
 import '../../styles/component.scss';
 
 const cn = classNames.bind(mystyle);

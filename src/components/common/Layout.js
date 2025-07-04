@@ -7,7 +7,7 @@ import Side from './Side';
 import Intro from '../../pages/Intro';
 import Works from '../../pages/Works';
 import Contact from '../../pages/Contact';
-import info from '../pages';
+import { info } from '../data';
 import { useSelector } from 'react-redux';
 import SendingLottie from '../img/SendingLottie';
 import { useEffect, useRef } from 'react';

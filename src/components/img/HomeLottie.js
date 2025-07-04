@@ -1,6 +1,6 @@
 import Lottie from 'react-lottie';
 import lottie_hello from './lotties/lottie_hello.json';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 const defaultOptions = {
   loop: 2,
@@ -20,22 +20,22 @@ const initStyle = {
 };
 
 const HomeLottie = () => {
-  const [styleTit, setStyleTit] = useState(initStyle);
-  const resizeWindow = () => {
-    if (matchMedia('screen and (max-width: 768px)').matches) {
-      setStyleTit({ ...initStyle, height: '260px' });
-    } else {
-      setStyleTit(initStyle);
-    }
-  };
-  useEffect(() => {
-    resizeWindow();
-    window.addEventListener('resize', resizeWindow);
-    return () => {
-      window.removeEventListener('resize', resizeWindow);
-    };
-  }, []);
-  return <Lottie options={defaultOptions} style={styleTit} />;
+  // const [styleTit, setStyleTit] = useState(initStyle);
+  // const resizeWindow = () => {
+  //   if (matchMedia('screen and (max-width: 375px)').matches) {
+  //     setStyleTit({ ...initStyle, height: '200px' });
+  //   } else {
+  //     setStyleTit(initStyle);
+  //   }
+  // };
+  // useEffect(() => {
+  //   resizeWindow();
+  //   window.addEventListener('resize', resizeWindow);
+  //   return () => {
+  //     window.removeEventListener('resize', resizeWindow);
+  //   };
+  // }, []);
+  return <Lottie options={defaultOptions} style={initStyle} />;
 };
 
 export default HomeLottie;

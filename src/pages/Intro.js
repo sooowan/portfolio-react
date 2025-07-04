@@ -15,7 +15,7 @@ const HomeBlock = styled.div`
     height: 280px;
     background: var(--df-hover);
     overflow: hidden;
-    @media (max-width: 375px) {
+    @media (max-width: 390px) {
       height: 200px;
     }
     &.gradient {

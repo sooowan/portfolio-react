@@ -6,24 +6,32 @@ const WeatherBlock = styled.div`
   align-items: flex-end;
   background: var(--bg-lv1);
   border-radius: 12px;
-  padding: 24px 32px;
+  padding: 24px 54px;
   margin-top: 24px;
-  .main {
+
+  @media (max-width: 768px) {
+    padding: 24px 32px;
+  }
+  .main,
+  .side {
     display: flex;
     flex-direction: column;
     gap: 6px;
-    .temp {
-      font-size: 3rem;
-      font-weight: 700;
-      line-height: 3.4rem;
-    }
-    .city {
-      font-size: 1.4rem;
-      line-height: 2rem;
-      opacity: 0.7;
-    }
+  }
+  .side {
+    align-items: flex-end;
   }
 
+  .temp {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.4rem;
+  }
+  .city {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    opacity: 0.7;
+  }
   .data {
     display: flex;
     font-size: 1.2rem;
@@ -48,12 +56,20 @@ const WeatherBlock = styled.div`
   .desc {
     display: flex;
     align-items: center;
-    background: var(--main-bg);
-    border-radius: 25px;
-    margin-bottom: 8px;
-    img {
-      width: 50px;
-      height: 50px;
+    gap: 8px;
+    p {
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+    .img {
+      width: 32px;
+      height: 32px;
+      border-radius: 25px;
+      background: var(--main-bg);
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 `;
@@ -75,9 +91,11 @@ export default function MyWeather({
         <span className="city">{city}</span>
         <span className="temp">{temp}°C</span>
       </div>
-      <div>
+      <div className="side">
         <div className="desc">
-          <img src={imgUrl} alt={desc} />
+          <div className="img">
+            <img src={imgUrl} alt={desc} />
+          </div>
           <p>{desc}</p>
         </div>
         <ul className="data">

@@ -5,6 +5,7 @@ import Button from '../components/common/Button';
 import { Helmet } from 'react-helmet-async';
 import { MyCalendar, Today } from '../components/widget/MyCalendar';
 import WeatherContainer from '../container/WeatherContainer';
+import { NotionIcon } from '../components/img/Icons';
 
 const HomeBlock = styled.div`
   margin-bottom: 42px;
@@ -79,10 +80,15 @@ const HomeBlock = styled.div`
   }
 `;
 const ButtonGrp = styled.div`
+  margin-top: 32px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  a,
+  button {
+    margin-top: 0;
+  }
 `;
 export default function Home() {
   return (
@@ -111,6 +117,7 @@ export default function Home() {
             className="large"
           >
             VIEW CAREER
+            <NotionIcon size={24} hasMarginLeft={true} />
           </Button>
         </ButtonGrp>
       </div>

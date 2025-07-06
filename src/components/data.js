@@ -42,7 +42,7 @@ export const works = [
       'OpenWeatherMap',
     ],
     detail:
-      'Notion을 모티브로 디자인 구상을 하였으며 react-calendar 라이브러리를 이용한 캘린더 위젯과 OpenWeatherMap API로 실시간 날씨 정보 업뎃 및 EmailJS API를 이용한 이메일 발송 기능 구현.',
+      'Notion을 모티브로 디자인 구상을 하였으며 react-calendar 라이브러리를 이용한 캘린더 위젯과 OpenWeatherMap API로 실시간 날씨 정보 업뎃 및 EmailJS API를 통한 이메일 발송 기능 구현.',
     style: 'lottie',
   },
   {

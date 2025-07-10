@@ -19,6 +19,7 @@ const AskModalBlock = styled.div`
     padding-bottom: 32px;
     font-size: 1.1rem;
     line-height: 1.6rem;
+    word-break: break-all;
   }
   .buttons {
     display: flex;

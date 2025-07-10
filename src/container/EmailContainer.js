@@ -42,7 +42,7 @@ export default function EmailContainer() {
         (error) => {
           console.log('실패...', error);
           dispatch(finishLoading('email/EMAIL_SEND'));
-          setModal2({ visible: true, msg: error.text });
+          setModal2({ visible: true, msg: error });
           dispatch(initialize());
         },
       );

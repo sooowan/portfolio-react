@@ -1,4 +1,4 @@
-export function NotionIcon({ size, hasMarginLeft, hasMarginRight, ...props }) {
+export function NotionIcon({ size, left, right, ...props }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,8 +8,8 @@ export function NotionIcon({ size, hasMarginLeft, hasMarginRight, ...props }) {
       height={size}
       viewBox="0 0 64 64"
       style={Object.assign(
-        hasMarginLeft && { marginLeft: '8px' },
-        hasMarginRight && { marginRight: '8px' },
+        left && { marginLeft: '8px' },
+        right && { marginRight: '8px' },
         { fill: 'var(--txt-df-color)' },
       )}
       {...props}

@@ -11,9 +11,6 @@ export default function EmailContainer() {
   const email = useSelector((state) => {
     return state.email;
   });
-  const loading = useSelector((state) => {
-    return state.loading['email/EMAIL_SEND'];
-  });
 
   const dispatch = useDispatch();
   //   const navigate = useNavigate();
@@ -32,7 +29,7 @@ export default function EmailContainer() {
 
     emailjs
       .send('service_o7lwk6b', 'template_m3dj4oh', email, {
-        publicKey: 'aoNhrtEijjgKex6Im',
+        publicKey: process.env.EMAIL_KEY,
       })
       .then(
         () => {
@@ -73,7 +70,7 @@ export default function EmailContainer() {
       <EmailForm
         onChangeField={onChangeField}
         onSubmit={onSubmit}
-        loading={loading}
+        // loading={loading}
         resetForm={reset}
       />
       <AskModal

@@ -57,7 +57,9 @@ const HomeBlock = styled.div`
         word-break: break-all;
         overflow: hidden;
         white-space: nowrap;
-        animation: appear 1.5s steps(100, end);
+        /* border-right: 0.2rem solid var(--oc-grape-7); */
+        animation: appear 3s steps(100, end);
+        /* blink-caret 0.75s step-end infinite; */
       }
     }
 
@@ -75,6 +77,15 @@ const HomeBlock = styled.div`
       }
       to {
         width: 100%;
+      }
+    }
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: var(--oc-grape-7);
       }
     }
   }
@@ -117,7 +128,7 @@ export default function Home() {
             className="large"
           >
             VIEW CAREER
-            <NotionIcon size={24} hasMarginLeft={true} />
+            <NotionIcon size={24} left={true} />
           </Button>
         </ButtonGrp>
       </div>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const WeatherBlock = styled.div`
   display: flex;
@@ -72,6 +72,33 @@ const WeatherBlock = styled.div`
       }
     }
   }
+  ${(props) =>
+    props.$loading &&
+    css`
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      gap: 8px;
+    `}
+  .loading {
+    /* font-size: 2rem;
+    line-height: 2rem; */
+    display: inline-block;
+    word-break: break-all;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: appear 1.5s steps(100);
+    animation-iteration-count: infinite;
+  }
+  @keyframes appear {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 `;
 
 export default function MyWeather({
@@ -83,35 +110,47 @@ export default function MyWeather({
   icon,
   humidity,
   feels_like,
+  loading,
 }) {
   const imgUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
   return (
-    <WeatherBlock>
-      <div className="main">
-        <span className="city">{city}</span>
-        <span className="temp">{temp}°C</span>
-      </div>
-      <div className="side">
-        <div className="desc">
-          <div className="img">
-            <img src={imgUrl} alt={desc} />
+    <>
+      {loading ? (
+        <WeatherBlock $loading={true}>
+          Loading
+          <div>
+            <span className="loading">• • •</span>
           </div>
-          <p>{desc}</p>
-        </div>
-        <ul className="data">
-          <li>
-            <span>습도</span>
-            <em>{humidity}%</em>
-          </li>
-          <li>
-            <span>체감</span>
-            <em>{feels_like}°C</em>
-          </li>
-        </ul>
-      </div>
+        </WeatherBlock>
+      ) : (
+        <WeatherBlock>
+          <div className="main">
+            <span className="city">{city}</span>
+            <span className="temp">{temp}°</span>
+          </div>
+          <div className="side">
+            <div className="desc">
+              <div className="img">
+                <img src={imgUrl} alt={desc} />
+              </div>
+              <p>{desc}</p>
+            </div>
+            <ul className="data">
+              <li>
+                <span>습도</span>
+                <em>{humidity}%</em>
+              </li>
+              <li>
+                <span>체감</span>
+                <em>{feels_like}°</em>
+              </li>
+            </ul>
+          </div>
+        </WeatherBlock>
+      )}
 
       {/* <p>{maxTemp}</p>
     <p>{minTemp}</p> */}
-    </WeatherBlock>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { handleActions } from 'redux-actions';
 import axios from 'axios';
+import { finishLoading, startLoading } from './loading';
 
 const GET_WEATHER = 'weather/GET_WEATHER';
 
@@ -8,12 +9,15 @@ export const getWeatherApi = () => async (dispatch) => {
   const apiKey = process.env.REACT_APP_WEATHER_KEY;
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
   try {
+    dispatch(startLoading('weather/GET_WEATHER'));
     const res = await axios.get(url);
     dispatch({ type: GET_WEATHER, payload: res.data });
+    // dispatch({ type: GET_WEATHER, payload: res.data });
     // console.log(res.data);
   } catch (e) {
     console.log(e);
   }
+  dispatch(finishLoading('weather/GET_WEATHER'));
 };
 
 const initialState = {

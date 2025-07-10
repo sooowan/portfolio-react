@@ -7,6 +7,9 @@ export default function WeatherContainer() {
   const weather = useSelector(({ weather }) => {
     return weather;
   });
+  const loading = useSelector((state) => {
+    return state.loading['weather/GET_WEATHER'];
+  });
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -22,6 +25,7 @@ export default function WeatherContainer() {
       icon={weather.icon}
       humidity={weather.humidity}
       feels_like={weather.feels_like.toFixed(0)}
+      loading={loading}
     />
   );
 }

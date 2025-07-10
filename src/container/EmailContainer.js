@@ -26,10 +26,11 @@ export default function EmailContainer() {
   const onConfirm = () => {
     setModal1(false);
     dispatch(startLoading('email/EMAIL_SEND'));
+    const key = process.env.REACT_APP_EMAIL_KEY;
 
     emailjs
       .send('service_o7lwk6b', 'template_m3dj4oh', email, {
-        publicKey: process.env.EMAIL_KEY,
+        publicKey: key,
       })
       .then(
         () => {

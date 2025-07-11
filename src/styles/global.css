@@ -13,7 +13,7 @@ body {
   height: 100%;
   font-size: 14px;
   line-height: 20px;
-  background: var(--df-bg);
+  background: var(--main-bg);
   overflow: hidden;
   font-family: 'Noto Sans KR';
 }

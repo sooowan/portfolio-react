@@ -10,11 +10,13 @@
   }
   .content-wrap {
     padding: 24px;
+    padding-bottom: 120px;
     overflow: auto;
     height: calc(100% - 48px);
     position: relative;
     &.attach {
       padding: 0;
+      padding-bottom: 120px;
     }
   }
   .tab-on {

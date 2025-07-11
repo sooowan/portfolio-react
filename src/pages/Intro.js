@@ -8,7 +8,6 @@ import WeatherContainer from '../container/WeatherContainer';
 import { NotionIcon } from '../components/img/Icons';
 
 const HomeBlock = styled.div`
-  margin-bottom: 42px;
   .header {
     position: relative;
     left: 0;

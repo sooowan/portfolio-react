@@ -91,6 +91,7 @@ const HomeBlock = styled.div`
 `;
 const ButtonGrp = styled.div`
   margin-top: 32px;
+  margin-bottom: 42px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;

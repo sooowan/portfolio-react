@@ -16,6 +16,7 @@ const cn = classNames.bind(mystyle);
 const pages = info.pages;
 const LayoutBlock = styled.div`
   display: flex;
+  height: 100%;
   @media (max-width: 768px) {
     display: block;
   }

@@ -109,7 +109,7 @@ export default function MyWeather({
   city,
   icon,
   humidity,
-  feels_like,
+  feelsLike,
   loading,
 }) {
   const imgUrl = `https://openweathermap.org/img/wn/${icon}@2x.png`;
@@ -142,7 +142,7 @@ export default function MyWeather({
               </li>
               <li>
                 <span>체감</span>
-                <em>{feels_like}°</em>
+                <em>{feelsLike}°</em>
               </li>
             </ul>
           </div>

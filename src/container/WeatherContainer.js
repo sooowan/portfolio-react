@@ -24,7 +24,7 @@ export default function WeatherContainer() {
       city={weather.city}
       icon={weather.icon}
       humidity={weather.humidity}
-      feels_like={weather.feels_like.toFixed(0)}
+      feelsLike={weather.feelsLike.toFixed(0)}
       loading={loading}
     />
   );

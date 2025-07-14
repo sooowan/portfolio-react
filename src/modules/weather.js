@@ -28,7 +28,7 @@ const initialState = {
   city: '',
   icon: null,
   humidity: 0,
-  feels_like: 0,
+  feelsLike: 0,
 };
 
 const weather = handleActions(
@@ -42,7 +42,7 @@ const weather = handleActions(
       city: payload.name,
       icon: payload.weather[0].icon,
       humidity: payload.main.humidity,
-      feels_like: payload.main.feels_like,
+      feelsLike: payload.main.feels_like,
     }),
   },
   initialState,

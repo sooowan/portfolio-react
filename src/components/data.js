@@ -25,7 +25,7 @@ export const works = [
     link: 'https://duddoi.github.io/portfolio-react/',
     title: {
       ico: '🥳',
-      text: 'REACT_PORTFOLIO',
+      text: 'REACT PORTFOLIO',
     },
     desc: '리액트 기반 포트폴리오입니다.(2025 ver.)',
     tags: [
@@ -50,7 +50,7 @@ export const works = [
     link: 'https://duddoi.github.io/blog/',
     title: {
       ico: '✍🏻',
-      text: 'BLOG',
+      text: 'BLOG APP',
     },
     desc: '리액트 프로젝트 블로그 app입니다.',
     tags: [
@@ -88,8 +88,7 @@ export const works = [
     },
     desc: '2019-2021년 진행한 프로젝트들입니다.(2022 ver.)',
     tags: ['HTML', 'CSS', 'jquery', 'photoshop', 'illustrator'],
-    detail:
-      'html, css, jquery를 이용한 퍼블리싱 작업으로 이루어진 full page형태의 포트폴리오.',
+    detail: '퍼블리싱 작업들로 이루어진 full page형태의 포트폴리오.',
     style: 'solid_indigo',
   },
 ];

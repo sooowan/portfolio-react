@@ -23,12 +23,12 @@ const WeatherBlock = styled.div`
   }
 
   .temp {
-    font-size: 3rem;
+    font-size: 3.4rem;
     font-weight: 700;
     line-height: 3.4rem;
   }
   .city {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     opacity: 0.7;
   }

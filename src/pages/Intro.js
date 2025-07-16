@@ -57,7 +57,7 @@ const HomeBlock = styled.div`
         overflow: hidden;
         white-space: nowrap;
         /* border-right: 0.2rem solid var(--oc-grape-7); */
-        animation: appear 3s steps(100, end);
+        animation: appear 2s steps(100, end);
         /* blink-caret 0.75s step-end infinite; */
       }
     }

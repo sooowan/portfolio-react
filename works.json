@@ -1,73 +1,79 @@
 [
   {
-    "_id": '000',
-    "link": 'https://duddoi.github.io/portfolio-react/',
+    "_id": "000",
+    "link": "https://duddoi.github.io/portfolio-react/",
     "title": {
-      "ico": '🥳',
-      "text": 'REACT PORTFOLIO',
+      "ico": "🥳",
+      "text": "REACT PORTFOLIO"
     },
-    "desc": '리액트 기반 포트폴리오입니다.(2025 ver.)',
+    "desc": "리액트 기반 포트폴리오입니다.(2025 ver.)",
     "tags": [
-      'React',
-      'redux',
-      'localStorage',
-      'styled-components',
-      'EmailJS',
-      'CSSModule',
-      'react-router',
-      'react-calendar',
-      'lottie',
-      // 'dark-mode',
-      'OpenWeatherMap',
+      "React",
+      "redux",
+      "localStorage",
+      "styled-components",
+      "EmailJS",
+      "CSSModule",
+      "react-router",
+      "react-calendar",
+      "lottie",
+      "OpenWeatherMap"
     ],
-    "detail":
-      'Notion을 모티브로 디자인 구상을 하였으며 react-calendar 라이브러리를 이용한 캘린더 위젯과 OpenWeatherMap API로 실시간 날씨 정보 업뎃 및 EmailJS API를 통한 이메일 발송 기능 구현.',
-    style: 'lottie',
+    "detail": "Notion을 모티브로 디자인 구상을 하였으며 react-calendar 라이브러리를 이용한 캘린더 위젯과 OpenWeatherMap API로 실시간 날씨 정보 업뎃 및 EmailJS API를 통한 이메일 발송 기능 구현.",
+    "style": "lottie"
   },
   {
-    "_id": '001',
-    "link": 'https://duddoi.github.io/blog/',
+    "_id": "001",
+    "link": "https://duddoi.github.io/blog/",
     "title": {
-      "ico": '✍🏻',
-      "text": 'BLOG APP',
+      "ico": "✍🏻",
+      "text": "BLOG APP"
     },
-    "desc": '리액트 프로젝트 블로그 app입니다.',
+    "desc": "리액트 프로젝트 블로그 app입니다.",
     "tags": [
-      'React',
-      'redux',
-      'localStorage',
-      'styled-components',
-      'react-router',
-      'react-select',
-      'CryptoJS',
-      'uuid',
+      "React",
+      "redux",
+      "localStorage",
+      "styled-components",
+      "react-router",
+      "react-select",
+      "CryptoJS",
+      "uuid"
     ],
-    "detail":
-      '블로그의 기본 기능 구현: 회원가입, 로그인, 글쓰기, 수정, 삭제, 내용보기, 태그 필터링, 페이징 처리, 유효성 검사 등. (수정 및 삭제는 본인이 쓴 글에 한함)',
-    style: 'gradient',
+    "detail": "블로그의 기본 기능 구현: 회원가입, 로그인, 글쓰기, 수정, 삭제, 내용보기, 태그 필터링, 페이징 처리, 유효성 검사 등. (수정 및 삭제는 본인이 쓴 글에 한함)",
+    "style": "gradient"
   },
   {
-    "_id": '002',
-    "link": 'https://duddoi.github.io/todo-app/',
+    "_id": "002",
+    "link": "https://duddoi.github.io/todo-app/",
     "title": {
-      "ico": '🗒️',
-      "text": 'TO-DO APP',
+      "ico": "🗒️",
+      "text": "TO-DO APP"
     },
-    "desc": '리액트 프로젝트 to-do app입니다.',
-    "tags": ['React', 'localStorage', 'styled-components'],
-    "detail": '할 일을 추가/완료/삭제 할 수 있는 todo list.',
+    "desc": "리액트 프로젝트 to-do app입니다.",
+    "tags": [
+      "React",
+      "localStorage",
+      "styled-components"
+    ],
+    "detail": "할 일을 추가/완료/삭제 할 수 있는 todo list."
   },
-
   {
-    "_id": '003',
-    "link": 'https://duddoi.github.io/2022_portfolio/',
+    "_id": "003",
+    "link": "https://duddoi.github.io/2022_portfolio/",
     "title": {
-      "ico": '🌈',
-      "text": '2022_PORTFOLIO',
+      "ico": "🌈",
+      "text": "2022_PORTFOLIO"
     },
-    "desc": '2019-2021년 진행한 프로젝트들입니다.(2022 ver.)',
-    "tags": ['HTML', 'CSS', 'jquery', 'photoshop', 'illustrator'],
-    "detail": '퍼블리싱 작업들로 이루어진 full page형태의 포트폴리오.',
-    "style": 'solid_indigo',
-  },
+    "desc": "2019-2021년 진행한 프로젝트들입니다.(2022 ver.)",
+    "tags": [
+      "HTML",
+      "CSS",
+      "jquery",
+      "photoshop",
+      "illustrator"
+    ],
+    "detail": "퍼블리싱 작업들로 이루어진 full page형태의 포트폴리오.",
+    "style": "solid_indigo"
+  }
 ]

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { MainTitle } from '../components/common/Titles';
 import { Helmet } from 'react-helmet-async';
 import WorkItem from '../components/works/WorkItem';
-import { works } from '../components/data';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 const WorkListBlock = styled.ul`
   display: flex;
@@ -18,6 +19,21 @@ const WorkListBlock = styled.ul`
 `;
 
 export default function Works() {
+  const [works, setWorks] = useState([]);
+  const getWorks = async () => {
+    const url =
+      'https://raw.githubusercontent.com/sooowan/portfolio-react/master/works.json';
+    try {
+      const res = await axios.get(url);
+      setWorks(res.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  useEffect(() => {
+    getWorks();
+  }, []);
+  // console.log(works);
   return (
     <div>
       <Helmet>

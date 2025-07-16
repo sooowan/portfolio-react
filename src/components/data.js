@@ -1,5 +1,5 @@
 export const info = {
-  title: 'SOOWAN의 Portfolio',
+  title: 'SOOOWAN의 Portfolio',
   pages: [
     {
       id: '1',

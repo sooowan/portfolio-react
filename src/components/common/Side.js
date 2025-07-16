@@ -1,28 +1,41 @@
 import { NavLink } from 'react-router-dom';
 import mystyle from '../../styles/Side.module.scss';
 import classNames from 'classnames/bind';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Toggle from './Toggle';
-import { info } from '../data';
 import '../../styles/component.scss';
+import axios from 'axios';
 
 const cn = classNames.bind(mystyle);
-const pages = info.pages;
 
-export default function Side({ title = info.title }) {
+export default function Side() {
   const nowTheme = localStorage.getItem('theme');
   const [theme, setTheme] = useState(nowTheme);
+  const [info, setInfo] = useState({ title: '', pages: [] });
 
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
 
+  const getInfo = async () => {
+    const url =
+      'https://raw.githubusercontent.com/sooowan/portfolio-react/master/info.json';
+    try {
+      const res = await axios.get(url);
+      setInfo(res.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  useEffect(() => {
+    getInfo();
+  }, []);
   return (
     <div className={cn('side-wrap')}>
       <header className={cn('header')}>
-        <h1>{title}</h1>
+        <h1>{info.title}</h1>
       </header>
       <aside className={cn('aside')}>
-        {pages.map((page) => (
+        {info.pages.map((page) => (
           <NavLink
             key={page.id}
             to={page.path}

@@ -18,7 +18,7 @@ export default function Side() {
 
   const getInfo = async () => {
     const url =
-      'https://raw.githubusercontent.com/sooowan/portfolio-react/master/data/info.json';
+      'https://raw.githubusercontent.com/sooowan/api/master/data/info.json';
     try {
       const res = await axios.get(url);
       setInfo(res.data);

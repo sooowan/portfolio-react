@@ -1,0 +1,20 @@
+{
+  "title": "SOOOWAN의 Portfolio",
+  "pages": [
+    {
+      "id": "1",
+      "path": "/",
+      "name": "🏠   Intro"
+    },
+    {
+      "id": "2",
+      "path": "/works",
+      "name": "🧑‍💻   Works"
+    },
+    {
+      "id": "3",
+      "path": "/contact",
+      "name": "📧   Contact"
+    }
+  ]
+}

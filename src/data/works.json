@@ -1,7 +1,7 @@
 [
   {
     "_id": "000",
-    "link": "https://duddoi.github.io/portfolio-react/",
+    "link": "https://sooowan.github.io/portfolio-react/",
     "title": {
       "ico": "🥳",
       "text": "REACT PORTFOLIO"
@@ -24,7 +24,7 @@
   },
   {
     "_id": "001",
-    "link": "https://duddoi.github.io/blog/",
+    "link": "https://sooowan.github.io/blog/",
     "title": {
       "ico": "✍🏻",
       "text": "BLOG APP"
@@ -45,7 +45,7 @@
   },
   {
     "_id": "002",
-    "link": "https://duddoi.github.io/todo-app/",
+    "link": "https://sooowan.github.io/todo-app/",
     "title": {
       "ico": "🗒️",
       "text": "TO-DO APP"
@@ -56,7 +56,7 @@
   },
   {
     "_id": "003",
-    "link": "https://duddoi.github.io/2022_portfolio/",
+    "link": "https://sooowan.github.io/2022_portfolio/",
     "title": {
       "ico": "🌈",
       "text": "2022_PORTFOLIO"

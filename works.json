@@ -1,25 +1,5 @@
-export const info = {
-  title: 'SOOOWAN의 Portfolio',
-  pages: [
-    {
-      id: '1',
-      path: '/',
-      name: '🏠\u00A0\u00A0 Intro',
-    },
-    {
-      id: '2',
-      path: '/works',
-      name: '🧑‍💻\u00A0\u00A0 Works',
-    },
-    {
-      id: '3',
-      path: '/contact',
-      name: '📧\u00A0\u00A0 Contact',
-    },
-  ],
-};
 
-export const works = [
+[
   {
     _id: '000',
     link: 'https://duddoi.github.io/portfolio-react/',

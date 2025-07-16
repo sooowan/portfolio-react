@@ -22,7 +22,7 @@ export default function Works() {
   const [works, setWorks] = useState([]);
   const getWorks = async () => {
     const url =
-      'https://raw.githubusercontent.com/sooowan/portfolio-react/master/src/data/works.json';
+      'https://raw.githubusercontent.com/sooowan/portfolio-react/master/data/works.json';
     try {
       const res = await axios.get(url);
       setWorks(res.data);

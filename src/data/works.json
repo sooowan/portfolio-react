@@ -10,13 +10,14 @@
     "tags": [
       "React",
       "redux",
+      "axios",
       "localStorage",
       "styled-components",
-      "EmailJS",
       "CSSModule",
       "react-router",
       "react-calendar",
       "lottie",
+      "EmailJS",
       "OpenWeatherMap"
     ],
     "detail": "Notion을 모티브로 디자인 구상을 하였으며 react-calendar 라이브러리를 이용한 캘린더 위젯과 OpenWeatherMap API로 실시간 날씨 정보 업뎃 및 EmailJS API를 통한 이메일 발송 기능 구현.",
@@ -61,7 +62,7 @@
       "ico": "🌈",
       "text": "2022_PORTFOLIO"
     },
-    "desc": "2019-2021년 진행한 프로젝트들입니다.(2022 ver.)",
+    "desc": "2019-2021년 진행한 프로젝트입니다.(2022 ver.)",
     "tags": ["HTML", "CSS", "jquery", "photoshop", "illustrator"],
     "detail": "퍼블리싱 작업들로 이루어진 full page형태의 포트폴리오.",
     "style": "solid_indigo"

@@ -32,7 +32,9 @@ export default function Side() {
   return (
     <div className={cn('side-wrap')}>
       <header className={cn('header')}>
-        <h1>{info.title}</h1>
+        <h1>
+          <span>{info.name}</span>의 Portfolio
+        </h1>
       </header>
       <aside className={cn('aside')}>
         {info.pages.map((page) => (

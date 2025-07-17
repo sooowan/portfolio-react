@@ -3,7 +3,7 @@ import HomeLottie from '../components/img/HomeLottie';
 import '../styles/font.scss';
 import Button from '../components/common/Button';
 import { Helmet } from 'react-helmet-async';
-import { MyCalendar, Today } from '../components/widget/MyCalendar';
+import { MyCalendar, CurrentTime } from '../components/widget/MyCalendar';
 import WeatherContainer from '../container/WeatherContainer';
 import { NotionIcon } from '../components/img/Icons';
 
@@ -115,7 +115,7 @@ export default function Home() {
           <span className="title-ico">🍅</span>
           <h4>안녕하세요! 이영애입니다.</h4>
         </div>
-        <Today />
+        <CurrentTime />
         <WeatherContainer />
         <MyCalendar />
         <ButtonGrp>

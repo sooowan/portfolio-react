@@ -4,13 +4,12 @@ import styled from 'styled-components';
 import BackgroundLottie from '../img/BackgroundLottie';
 const WorkItemBlock = styled.li`
   width: 380px;
-  height: 420px;
+  height: auto;
+  align-self: stretch;
   @media (max-width: 1114px) {
     width: 100%;
     max-width: 380px;
-  }
-  @media (max-width: 768px) {
-    max-height: 390px;
+    margin: 0 auto;
   }
   a {
     position: relative;
@@ -21,7 +20,7 @@ const WorkItemBlock = styled.li`
   }
   .work-header {
     position: relative;
-    height: 28%;
+    height: 120px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background: var(--df-hover);
@@ -38,7 +37,7 @@ const WorkItemBlock = styled.li`
       background: var(--oc-indigo-5);
     }
     &.lottie {
-      background: var(--oc-pink-5);
+      background: var(--oc-cyan-3);
     }
   }
   .work-content {
@@ -47,7 +46,7 @@ const WorkItemBlock = styled.li`
     background: var(--df-bg);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 48px 24px 24px 24px;
+    padding: 32px 24px 24px 24px;
     font-size: 1.2rem;
     line-height: 1.4rem;
     display: flex;
@@ -65,11 +64,11 @@ const WorkItemBlock = styled.li`
       left: 24px;
       top: -2rem;
       width: calc(100% - 48px);
-      font-size: 4rem;
+      font-size: 3rem;
       display: inline-flex;
       align-items: center;
-      width: 4rem;
-      height: 4rem;
+      width: 3rem;
+      height: 3rem;
     }
     .tag-list {
       margin-top: 12px;
@@ -90,7 +89,7 @@ const WorkItemBlock = styled.li`
         padding: 10px;
         background: var(--df-hover);
         border-radius: 8px;
-        margin-top: 12px;
+        margin-top: 20px;
         font-size: 0.9rem;
         line-height: 1.2rem;
       }

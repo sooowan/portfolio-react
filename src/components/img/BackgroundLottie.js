@@ -1,5 +1,5 @@
 import Lottie from 'react-lottie';
-import lottie_bubble from './lotties/lottie_bubble.json';
+import lottie_bubble from './lotties/lottie_cat.json';
 
 const defaultOptions = {
   loop: true,
@@ -12,7 +12,7 @@ const defaultOptions = {
 };
 
 const initStyle = {
-  width: '50%',
+  width: '30%',
   height: '100%',
   pointerEvents: 'none',
 };

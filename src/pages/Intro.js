@@ -113,7 +113,7 @@ export default function Home() {
       <div className="content">
         <div className="title">
           <span className="title-ico">🍅</span>
-          <h4>안녕하세요! 이영애입니다.dddd</h4>
+          <h4>안녕하세요! 이영애입니다. 잠깐만...</h4>
         </div>
         <CurrentTime />
         <WeatherContainer />

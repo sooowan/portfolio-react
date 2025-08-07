@@ -2,7 +2,7 @@
   "name": "portfolio-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://duddoi.github.io/portfolio-react/",
+  "homepage": "https://portfolio-react-sooowans-projects.vercel.app/",
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@lottiefiles/dotlottie-react": "^0.14.0",
